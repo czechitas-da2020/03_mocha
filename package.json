@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js",
+    "install-selenium": "./node_modules/.bin/selenium-standalone install",
+    "start-selenium": "./node_modules/.bin/selenium-standalone start"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "@wdio/spec-reporter": "^6.4.7",
     "@wdio/sync": "^6.5.0",
     "chromedriver": "^85.0.1",
-    "wdio-chromedriver-service": "^6.0.4"
+    "wdio-chromedriver-service": "^6.0.4",
+    "selenium-standalone": "^6.20.1"
   }
 }

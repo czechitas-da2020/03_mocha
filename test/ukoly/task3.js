@@ -10,18 +10,16 @@
   Ověř, že tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky.
 */
 
-describe('what to test', () => { 
+describe('Automation page Adding', () => { 
   before(()=>{
     browser.url('https://automation.cervik.repl.co/adding.html')
   })
 
-  it('test-case', ()=>{
-
-  })
-
-  describe('nejaka cast stranky / feature', ()=>{
-    it('test-case pro danou stranku/feature', ()=>{
-
-    })
-  })
+  it('ověřím, že kliknutím tlačítka Přidej kočku se přidá kočka do seznamu', ()=>{})
+  it('ověřím, že multiple kliknutím tlačítka Přidej kočku se přidá kočky do seznamu')
+  it('ověř, že kliknutí tlačítka Odeber kočku odebere právě jednu kočku')
+  it('ověř, že tlačítko Apokalypsa smaže všechny karty')
+  it('Ověř, že počítadlo koček reaguje na přidání kočky, smazání kočky, smazání všech koček')
+  it('Ověř, že tlačítka na odebrání jsou aktivní jen, když je zobrazena aspoň jedna karta kočky')
+  it('Ověř, že tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky.')
 })

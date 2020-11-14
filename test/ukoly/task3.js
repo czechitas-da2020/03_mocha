@@ -50,6 +50,7 @@ describe('Automation page Adding', () => {
     buttonApokalypsa.click()
     expect(cats).toBeElementsArrayOfSize(0)
   })
+
   describe('Pocitadlo', ()=>{
     it('overim, ze kliknutim na tlaciko Pridej zvedne pocitadlo o 1', ()=>{
       buttonAdd.click()
@@ -68,6 +69,15 @@ describe('Automation page Adding', () => {
       expect(counter).toHaveText('0')
     })
   })
-  it('Ověř, že tlačítka na odebrání jsou aktivní jen, když je zobrazena aspoň jedna karta kočky')
-  it('Ověř, že tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky.')
+  it('Ověř, že tlačítka na odebrání jsou aktivní jen, když je zobrazena aspoň jedna karta kočky', ()=>{
+    buttonAdd.click()
+    expect(buttonRemove).not.toHaveElementClass('disabled')
+    expect(buttonApokalypsa).not.toHaveElementClass('disabled')
+  })
+  it('Ověř, že tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky.', ()=>{
+    buttonAdd.click()
+    buttonRemove.click()
+    expect(buttonRemove).toHaveElementClass('disabled')
+    expect(buttonApokalypsa).toHaveElementClass('disabled')
+  })
 })
